@@ -1,0 +1,5 @@
+hadoop100,192.168.186.100 - - [21/Apr/2021:01:36:19 +0800] "GET /shop/detail.html?id=4028f00176e1aa620176e6aca6890003 HTTP/1.0" 200 4366 "-" "ApacheBench/2.3" "-"
+hadoop100,192.168.186.100 - - [21/Apr/2021:01:36:19 +0800] "GET /shop/detail.html?id=4028f00176e1aa620176e6aca6890003 HTTP/1.0" 200 4366 "-" "ApacheBench/2.3" "-"
+hadoop100,192.168.186.100 - - [21/Apr/2021:01:36:19 +0800] "GET /shop/detail.html?id=4028f00176e1aa620176e6aca6890003 HTTP/1.0" 200 4366 "-" "ApacheBench/2.3" "-"
+hadoop100,192.168.186.100 - - [21/Apr/2021:01:36:19 +0800] "GET /shop/detail.html?id=4028f00176e1aa620176e6aca6890003 HTTP/1.0" 200 4366 "-" "ApacheBench/2.3" "-"
+hadoop100,192.168.186.100 - - [21/Apr/2021:01:36:19 +0800] "GET /shop/detail.html?id=4028f00176e1aa620176e6aca6890003 HTTP/1.0" 200 4366 "-" "ApacheBench/2.3" "-"
