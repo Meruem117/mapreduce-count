@@ -16,10 +16,10 @@ public class LogJobMain {
         System.setProperty("HADOOP_USER_NAME", "meru");
 
         // Linux
-        // if (args.length < 2) {
-        //     System.out.println("Usage:hadoop jar Log.jar " + LogJob.class.getName() + " input ouput");
-        //     System.exit(0);
-        // }
+//        if (args.length < 2) {
+//            System.out.println("Usage:hadoop jar Log.jar " + LogJobMain.class.getName() + " input ouput");
+//            System.exit(0);
+//        }
 
         Configuration configuration = new Configuration();
         Job job = Job.getInstance(configuration);
@@ -40,8 +40,8 @@ public class LogJobMain {
         Path outputPath = new Path("./output/");
 
         // Linux
-        // Path inputPath = new Path(args[0]);
-        // Path outputPath = new Path(args[1]);
+//        Path inputPath = new Path(args[0]);
+//        Path outputPath = new Path(args[1]);
 
         if (fileSystem.exists(outputPath)) {
             fileSystem.delete(outputPath, true);
@@ -52,8 +52,8 @@ public class LogJobMain {
         FileOutputFormat.setOutputPath(job, outputPath);
 
         // Linux
-        // FileInputFormat.setInputPaths(job, new Path(args[0]));
-        // FileOutputFormat.setOutputPath(job, new Path(args[1]));
+//        FileInputFormat.setInputPaths(job, new Path(args[0]));
+//        FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
         boolean completion = job.waitForCompletion(true);
         System.exit(completion ? 0 : -1);
