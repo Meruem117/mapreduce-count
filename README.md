@@ -1,9 +1,10 @@
 # MapReduce_count_text
+
 A mapreduce work to count different columns.
 
 ## Mapper
 
-One line of log	=>
+One line of log =>
 
 - Key- `author` or `bvid` or `user_location`
 
@@ -23,7 +24,7 @@ log sample
 
 ## Reducer
 
-Mapper (K,V)	=>
+Mapper (K,V)    =>
 
 - Key: K - key of mapper(`author` or `bvid` or `user_location`)
 - Value: `type` + "\t"  + `sum` + "\t" + `date`
@@ -40,7 +41,7 @@ date - process date
 
 **related project**
 
-> the results are stored in mysql 
+> the results are stored in mysql
 >
 > use ssh2 to execute mapreduce on linux
 
@@ -50,5 +51,5 @@ date - process date
 
 [Vue](https://github.com/Meruem117/vite_vue3_start)
 
-[React(undergoing)](https://github.com/Meruem117/react_ant_start)
+[React](https://github.com/Meruem117/react_ant_start)
 
