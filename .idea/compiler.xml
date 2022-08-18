@@ -10,5 +10,8 @@
         <module name="mapreduce-count" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mapreduce-count" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
