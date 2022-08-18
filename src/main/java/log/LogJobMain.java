@@ -12,11 +12,11 @@ public class LogJobMain {
     public static void main(String[] args) throws Exception {
 
         // Windows
-//        System.setProperty("HADOOP_USER_NAME", "meru");
+        // System.setProperty("HADOOP_USER_NAME", "meru");
 
         // Linux
         if (args.length < 2) {
-            System.out.println("Usage:hadoop jar Log.jar " + LogJobMain.class.getName() + " input ouput");
+            System.out.println("Usage:hadoop jar Log.jar " + LogJobMain.class.getName() + " input output");
             System.exit(0);
         }
 
@@ -35,8 +35,8 @@ public class LogJobMain {
         FileSystem fileSystem = FileSystem.get(configuration);
 
         // Windows
-//        Path inputPath = new Path("./input/log.log");
-//        Path outputPath = new Path("./output/");
+        // Path inputPath = new Path("./input/log.log");
+        // Path outputPath = new Path("./output/");
 
         // Linux
         Path inputPath = new Path(args[0]);
@@ -46,13 +46,8 @@ public class LogJobMain {
             fileSystem.delete(outputPath, true);
         }
 
-        // Windows
-//        FileInputFormat.setInputPaths(job, inputPath);
-//        FileOutputFormat.setOutputPath(job, outputPath);
-
-        // Linux
-        FileInputFormat.setInputPaths(job, new Path(args[0]));
-        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        FileInputFormat.setInputPaths(job, inputPath);
+        FileOutputFormat.setOutputPath(job, outputPath);
 
         boolean completion = job.waitForCompletion(true);
         System.exit(completion ? 0 : -1);
