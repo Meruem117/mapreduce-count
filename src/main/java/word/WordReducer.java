@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 public class WordReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
-    private IntWritable result = new IntWritable();
+    private final IntWritable result = new IntWritable();
 
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context)
@@ -16,7 +16,6 @@ public class WordReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
         for (IntWritable value : values) {
             sum += value.get();
         }
-        //for循环遍历，将得到的values值累加
         result.set(sum);
         context.write(key, result);
     }

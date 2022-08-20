@@ -1,7 +1,6 @@
 package word;
 
 import java.io.IOException;
-import java.util.StringTokenizer;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -22,12 +21,10 @@ public class WordJobMain {
 
         Path inputPath = new Path("./input/access.log");
         Path outputPath = new Path("./output/");
-//        Path in = new Path("hdfs://localhost:9000/mymapreduce1/in/file");
-//        Path out = new Path("hdfs://localhost:9000/mymapreduce1/out");
+
         FileInputFormat.setInputPaths(job, inputPath);
         FileOutputFormat.setOutputPath(job, outputPath);
-//        FileInputFormat.addInputPath(job, in);
-//        FileOutputFormat.setOutputPath(job, out);
+
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }
