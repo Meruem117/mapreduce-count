@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class LogReducer extends Reducer<Text, Text, Text, Text> {
-
     SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
     String date = df.format(new Date());
     int sumTotal = 0;
@@ -47,5 +46,4 @@ public class LogReducer extends Reducer<Text, Text, Text, Text> {
         context.write(new Text("登录"), new Text("4" + "\t" + sumLogin + "\t" + date));
         context.write(new Text("未登录"), new Text("4" + "\t" + sumNotLogin + "\t" + date));
     }
-
 }
